@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoopS in JAVASCRIPT</title>
+    <style>
+        body {
+            background-color: rgb(241, 199, 206);
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        h1 {
+            text-align: center;
+            color: red;
+            text-decoration: underline green;
+        }
+
+        h3 {
+            color: blue;
+        }
+        .div{
+            height: 190vh;
+            border: 2px green solid;
+            padding: 20px;
+        }
+        h5{
+            color: red;
+        }
+        li{
+            color: brown;
+        }
+        p{
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>For loope in js</h1>
+
+
+    <h3>In JavaScript, loops allow you to execute a block of code repeatedly. <br> There are several types of loops in
+        JavaScript, each serving a specific purpose. <br> Here's an overview of the most common loops in JavaScript:
+    </h3>
+<div class="div">
+    <h5>for loop</h5>
+    <li>The `for` loop is the most commonly used loop. It repeats a block of code a certain number of times, and it consists
+    of three parts: initialization, condition, and iteration.</li>
+
+  <p>
+    for (let i = 0; i < 5; i++) {<br>
+         console.log(i); <br>
+        }; <br></p>
+       
+        
+
+ <h5>while loop</h5>
+        <li>while loop continues to execute as long as a specified condition evaluates to `true`.</li>
+         <p>let i=0; <br>
+        while (i < 5) { <br>
+             console.log(i); <br>
+             }
+            </p>
+        <h5>do...while loop</h5>
+        <li>The do...while loop is similar to the `while` loop, <br>
+        but the condition is checked **after** the loop body runs, meaning the loop will always run at least once.</li>
+
+        <p>let i=0;  <br>
+            do { console.log(i);  <br>
+             } while (i < 5);  <br>
+            </p>
+        <h5>for...in loop </h5>
+        <li>The for...in loop is used for iterating over the properties of an object.</li>
+        <p>const person={ name: "Alice" , age: 25, occupation: "developer" }; <br>
+             for (let key in person) { <br>
+        console.log(key + ": " + person[key]);  <br>
+         } 
+         </p>
+         <h5>for...of` loop</h5>
+         <li>The for...of loop is used for iterating over **iterable objects** (like arrays, strings, maps, etc.).</li>
+        <p>const fruits=["apple", "banana" , "cherry" ]; <br>
+             for (let fruit of fruits) {  <br>
+                console.log(fruit); <br>
+        } 
+        </p>
+        <h5>forEach() (Array Method)</h5>
+        <li>forEach() is a higher-order function available on arrays to iterate over the elements.</li>
+        <p>const numbers=[1, 2, 3, 4, 5]; <br>
+             numbers.forEach((number)=> { <br>
+        console.log(number);  <br>
+        });
+        </p>
+
+        
+
+        <h5>Example of Nested Loops</h5>
+
+        <li>You can also use loops inside other loops, known as **nested loops**.</li>
+
+
+        <p>for (let i = 0; i < 3; i++) {  <br>
+            for (let j=0; j < 3; j++) {  <br>
+                console.log(`i: ${i}, j: ${j}`); <br>
+             } } 
+           </p>
+           <h5>Loop Control Statements - **`break`**</h5>
+           <li>Exits the loop entirely.</li>
+            <p>for (let i=0; i < 5; i++) { <br>
+                if (i===3) { <br>
+                     break; <br>
+                     }
+            console.log(i);  <br>
+        } 
+        </p>
+        <h5>continue</h5>
+        <li>Skips the current iteration and proceeds to the next iteration.</li>
+            <p> for (let i=0; i < 5; i++) { if (i===3) {  <br>
+                continue; <br>
+            } <br>
+            console.log(i); <br>
+         } 
+    </div>
+            <script>
+            //FOR LOOP IN JAVASCRIPT
+            console.log('forward loop')
+            for (let i = 1; i <= 5; i++) { console.log(i); } console.log('backward loop') for (let i=5; i>= 1; i--) {
+                console.log(i);
+                }
+
+                console.log('1 to 15 Odd numbers')
+                let k = 1
+                for (let k = 1; k <= 15; k++) { //(k=1; k<=15; k +=2) if (k % 2 !=0) { console.log('odd number=', k);
+            }
+        }
+
+        console.log(' even numbers 2 to 20'); for (let i=2; i <=20; i++) { //(i=; i<=20; i +=2) if (i % 2===0) {
+                    console.log('even number=', i);
+            }
+        }
+
+        /*console.log(' infinite loops'); for(let i=1; i>=0; i++){
+                    console.log('infinite loop=',i)
+                    }*/
+                    console.log('2 Table');
+                    let m = 2;
+                    for (m = 2; m <= 20; m +=2) { console.log('2 table=', m);
+        }
+
+        let l = prompt(' Enter any number'); l=parseInt(l); for (let i=l; i <=l * 10; i=i + l) { console.log(`table
+                        ${l}=`, i); } //SUM OF FIRST N NUMBERS let sum=0; let N=10; for (let i=0; i <=N; i++) { sum=sum
+                        + i; } console.log('sum=', sum);    
+        
+        
+    //WHILE LOOP IN JAVASCRIPT
+    let i =1;
+        while(i <=10){
+            console.log(i);
+            i++;
+        }
+    //0 TO 20 EVEN NUMBERS
+    let a =0;
+    while(a <=20){
+        console.log(' even numbers=',a);
+        a = a+2;
+    }     
+    
+    //1 to 20 ODD NUMBERS
+
+    let b = 1;
+    while(b <=20){
+        console.log(' odd numbr=',b);
+        b = b+2;
+    }
+    </script>
+</body>
+
+</html>
