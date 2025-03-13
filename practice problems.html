@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: pink;
+        }
+        h1{
+            text-align: center;
+            color: blue;
+            font-size: 50px;
+        }
+    </style>
+</head>
+
+<body>
+<h1>open console</h1>
+    <script>
+        //Loops
+        for (i = 0; i <= 50; i++) {
+            console.log('i=', i);
+        }
+
+        let sum = 0;
+        for (i = 1; i <= 100; i++) {
+            sum = sum + i;
+            console.log('i=', sum);
+        }
+
+
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) {
+                result = result * i;
+                console.log(`The factorial ${n}is`, result);
+            }
+        }
+        factorial(3);
+
+
+        let n_1 = 50;
+        for (let i = 1; i <= n_1; i++) {
+            if (i % 2 !== 0) {
+                console.log('i=', i);
+            }
+        }
+
+        let x = 9;
+        for (let i = 1; i <= 10; i++) {
+            console.log(`${x} * ${i} = ${x * i}`);
+        }
+    </script>
+</body>
+
+</html>
